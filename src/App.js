@@ -35,7 +35,12 @@ function App() {
 
   // Todo: Items'ın tüm elemanlarını silme
   function handleClearItems() {
-    setItems([]);
+    // Todo: Silme işleminde onay alma durumu
+    const confirmed = window.confirm(
+      "Tüm liste elemanlarını silmek istediğinize emin misiniz?",
+    );
+
+    if (confirmed) setItems([]);
   }
 
   return (
